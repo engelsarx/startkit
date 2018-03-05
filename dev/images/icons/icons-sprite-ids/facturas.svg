@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon/facturas
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path fill-opacity=".6" fill="#57AADE" opacity=".5" d="M120.082 194.547H63.737V67.934h80.996V169.16z"/>
+        <path stroke="#002395" stroke-linecap="round" stroke-linejoin="round" d="M114.082 188.547H57.737V61.934h80.996V163.16z"/>
+        <path stroke="#002395" stroke-linecap="round" stroke-linejoin="round" d="M113.934 188.065v-25.387h24.65m-58.049-61.5c-6.592 0-11.938 5.347-11.938 11.939 0 6.594 5.346 11.938 11.938 11.938 6.594 0 11.939-5.344 11.939-11.938H80.535v-11.939z"/>
+        <path d="M84.117 109.535h11.938c0-6.592-5.344-11.938-11.938-11.938v11.938z" stroke="#002395" stroke-linecap="round" stroke-linejoin="round"/>
+        <path stroke="#002395" d="M69.5 75.5h63v12.979h-63z"/>
+        <path d="M70.5 132.5h44m8 0h9m-61 8h44m8 0h9m-61 8h44m8 0h9m0-48h-24m24 8h-24m24 8h-24" stroke="#002395" stroke-linecap="square"/>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon/calendar
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path fill-opacity=".5" fill="#9BBEEA" d="M6.5 4.5h19v21h-23v-21z"/>
+        <path stroke="#002395" stroke-linecap="round" stroke-linejoin="round" d="M4.5 2.5h19v21H.5v-21z"/>
+        <path d="M7.5 2.5h9" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M.5 7.5h23m-17 2v12m5-12v12m6-12v12m-15-10h19m-19 4h19m-19 4h19" stroke="#002395" stroke-linecap="round" stroke-linejoin="round"/>
+        <path stroke="#002395" fill="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5h3v-4h-3zm12 0h3v-4h-3z"/>
+    </g>
+</svg>

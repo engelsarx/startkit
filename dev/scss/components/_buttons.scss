@@ -1,0 +1,98 @@
+%btn--base {
+  display: inline-block;
+  background-color: $transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  @include style(14px,$transparent,$ff);
+  font-weight: $fw-500;
+  line-height: 1.7;
+  transition: all 250ms $ease-in;
+  text-decoration: none;
+  text-align: center;
+  border-radius:8px;
+  position: relative;
+  z-index: z(default);
+  overflow: hidden;
+  min-width: 120px;
+
+  @media(min-width: $tablet) {
+    @include font-size(16px);
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    transition: border-color 200ms $ease-in, background-color 200ms $ease-in;
+  }
+}
+
+%btn-inactive {
+
+  &.inactive {
+    cursor: not-allowed !important;
+    transition: none;
+    background-color: lighten($text-lighten-color,5%);
+    color: palette(white);
+    border-color: currentColor;
+
+    &:focus,
+    &:hover {
+      background-color: lighten($text-lighten-color,5%) !important;
+      color: palette(white);
+    }
+  }
+
+}
+
+%btn {
+  @extend %btn--base;
+  @extend %btn-inactive;
+}
+
+%btn--default {
+  @extend %btn;
+  color: palette(gray, light);
+  border: 1px solid palette(gray, light);
+}
+
+%btn--primary {
+  @extend %btn;
+  color: palette(white);
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+
+  &:focus,
+  &:hover{
+    background-color: palette(green, light) !important;
+    border: 1px solid $primary-color;
+  }
+}
+%btn--secondary {
+  @extend %btn;
+  color: palette(white);
+  border: 1px solid $secondary-color;
+  background-color: $secondary-color;
+
+  &:focus,
+  &:hover{
+    color: palette(white);
+    background-color: $secondary-lighten-color !important;
+    border: 1px solid $secondary-color;
+  }
+}
+
+.btn-default {
+  @extend %btn;
+  @extend %btn--default;
+}
+
+.btn-primary {
+  @extend %btn;
+  @extend %btn--primary;
+}
+.btn-secondary {
+  @extend %btn;
+  @extend %btn--secondary;
+}

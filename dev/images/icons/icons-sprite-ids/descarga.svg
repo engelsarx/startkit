@@ -1,0 +1,10 @@
+<svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon/descarga
+    </title>
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M25.913 19v2.08a3.12 3.12 0 0 1-3.118 3.118H5.118A3.118 3.118 0 0 1 2 21.079V19m12 .596V1" stroke="#9BBEEA" stroke-width="2" opacity=".5"/>
+        <path stroke="#9BBEEA" stroke-width="2" opacity=".5" d="M22.217 12l-7.608 7.609L7 12"/>
+        <path d="M24.457 19.258v2.08a3.12 3.12 0 0 1-3.119 3.118H3.662a3.118 3.118 0 0 1-3.119-3.118v-2.08M12 19.14V.544m8.109 10.986L12.5 19.14l-7.609-7.61" stroke="#002395"/>
+    </g>
+</svg>

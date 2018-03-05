@@ -1,0 +1,333 @@
+// VERTICAL RHYTHM
+// ---------------
+// http://typographyhandbook.com/
+
+// body {
+//   line-height: 1.4; // Base line height
+// }
+
+// p {
+//   font-size: 1.25em; // Base font size
+//   margin-bottom: 1.75rem; // Base vertical spacing: (1.4 * 1.25) = 1.75
+// }
+
+// h1 {
+//   font-size: 3em;
+//   margin-bottom: 3.5rem; // Double the base value for a larger gap (1.75 * 2) = 3.5
+// }
+
+// h2 {
+//   font-size: 2em;
+//   margin-bottom: 1.75rem;
+// }
+
+// h3 {
+//   font-size: 1.5em;
+//   margin-bottom: 1.75rem;
+// }
+
+// .page-container {
+//   padding: 3.5rem 2rem; // 3.5 is double the base value
+// }
+
+
+// Simple Sass Implementation
+
+$base-line-height: 1.4;
+$base-font-size: 1rem;
+$vertical-rhythm: $base-line-height * $base-font-size;
+
+// body {
+//   line-height: $base-line-height;
+// }
+
+// p {
+//   font-size: $base-font-size;
+//   margin-bottom: $vertical-rhythm;
+// }
+
+// h1 {
+//   font-size: 3em;
+//   margin-bottom: $vertical-rhythm * 2;
+// }
+
+// h2 {
+//   font-size: 2em;
+//   margin-bottom: $vertical-rhythm;
+// }
+
+// h3 {
+//   font-size: 1.5em;
+//   margin-bottom: $vertical-rhythm;
+// }
+
+// .page-container {
+//   padding: ($vertical-rhythm * 2) 2rem;
+// }
+
+
+// Sass responsive modular scale
+
+
+// Modular scale
+// http://www.modularscale.com/?1.25&em&1.33&web&text
+
+$type-scale-large: (
+  h1: 3.911rem,
+  h2: 2.941rem,
+  h3: 2.211rem,
+  h4: 1.663rem,
+  p: 1.25rem
+);
+
+// Modular scale
+// http://www.modularscale.com/?1.25&em&1.25&web&text
+
+$type-scale-medium: (
+  h1: 3.052rem,
+  h2: 2.441rem,
+  h3: 1.953em,
+  h4: 1.563rem,
+  p: 1.25rem,
+);
+
+
+// Modular scale
+// http://www.modularscale.com/?1.1&em&1.25&web&text
+
+$type-scale-small: (
+  h1: 2.686rem,
+  h2: 2.148rem,
+  h3: 1.719rem,
+  h4: 1.375rem,
+  p: 1.1rem
+);
+
+
+$breakpoint-medium: 75em;
+$breakpoint-small: 45em;
+
+@mixin size($level) {
+  font-size: map-get($type-scale-large, $level);
+  @media (max-width: $breakpoint-medium) {
+     font-size: map-get($type-scale-medium, $level);
+  }
+  @media (max-width: $breakpoint-small) {
+     font-size: map-get($type-scale-small, $level);
+  }
+}
+
+// Example
+
+// .title {
+//   @include size(h1);
+// }
+
+
+// BASIC PAGES (TEXT EDITOR)
+// =========================
+//
+//  Página editable con editor de texto
+//  - cookies
+//  - aviso legal
+//  - política lega
+//
+
+@mixin basic-title($tag) {
+
+    $_small  : 16px !default;
+    $_medium : 20px !default;
+    $_large  : 24px !default;
+    $_weight : 700 !default;
+    $_color : $text-color !default;
+
+    @if $tag == "title-1" {
+
+        $_small : 20px;
+        $_medium : 22px;
+        $_large : 24px;
+
+    } @else if $tag == "title-2" {
+
+        $_small : 18px;
+        $_medium : 20px;
+        $_large : 22px;
+
+    } @else if $tag == "h3" {
+
+        $_small : 16px;
+        $_medium : 18px;
+        $_large : 20px;
+
+    } @else if $tag == "text" {
+
+        $_small : 14px;
+        $_medium : 14px;
+        $_large : 15px;
+        $_weight : 400;
+        $_color : $text-color;
+
+    }
+
+
+    @include style($_small,$_color,$ff);
+    font-weight: $_weight;
+
+    @include mq($from: tablet){
+        @include font-size($_medium);
+    }
+
+    @include mq($from: desktop_wide){
+        @include font-size($_large);
+    }
+}
+
+
+.basic-container {
+    max-width: $desktop-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem 0;
+    margin-bottom: ($vertical-rhythm * 2);
+    font-family: $ff;
+
+    @include mq($from: desktop_large_padding){
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    // reset
+    // h1, h2, h3, h4, h5, h6,
+    // p, span, strong,
+    // ul, ol, li {
+    // }
+
+    // TITLES
+    h1 {
+      @include basic-title("title-1");
+      margin-bottom: $vertical-rhythm;
+      font-weight: $fw-900;
+
+      @include mq($from: desktop){
+          margin-bottom: $vertical-rhythm * 1.5;
+      }
+    }
+    h2 {
+      @include basic-title("title-2");
+      margin-bottom: $vertical-rhythm;
+      font-weight: $fw-900;
+
+      @include mq($from: desktop){
+          margin-bottom: $vertical-rhythm * 1.5;
+      }
+    }
+    h3,
+    h4 {
+      @include basic-title("h3");
+      margin-bottom: $vertical-rhythm;
+      font-weight: $fw-900;
+
+      @include mq($from: desktop){
+          margin-bottom: $vertical-rhythm * 1.5;
+      }
+    }
+    h5 {}
+    h6 {}
+
+
+    // TABLE
+    table {
+      margin-top: 0;
+      @include basic-title("text");
+      margin-bottom: $vertical-rhythm;
+      font-weight: $fw-500;
+    }
+
+    // PARAGRAPHS
+    p {
+      margin-top: 0;
+      @include basic-title("text");
+      margin-bottom: $vertical-rhythm;
+      font-weight: $fw-500;
+    }
+
+
+    // LINKS
+    a:not(.button-back) {
+      @include basic-title("text");
+      font-weight: $fw-900;
+
+      display: inline-block;
+      border-bottom: 2px solid $text-color;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $text-lighten-color;
+        border-color: $text-lighten-color;
+        text-decoration: none;
+      }
+    }
+
+
+    // IMG
+    img {}
+
+
+    // UNORDERED LIST AND SUBLIST
+    ul {
+        padding-left: $vertical-rhythm * 2;
+        margin-bottom: $vertical-rhythm * 1.5;
+        list-style-type: disc;
+        li {
+          list-style-type: disc;
+          @include basic-title("text");
+
+          ul {
+              margin-bottom: 0;
+              li {}
+          }
+        }
+    }
+
+
+    // ORDERED LIST AND SUBLIST
+    ol {
+        padding-left: $vertical-rhythm * 2;
+        margin-bottom: $vertical-rhythm * 1.5;
+        list-style-type: decimal;
+        li {
+          list-style-type: decimal;
+          @include basic-title("text");
+
+          ol {
+              margin-bottom: 0;
+              li {}
+          }
+        }
+    }
+
+
+    // SEPARATOR
+    hr {
+        display: block;
+        width: 100%;
+        height: 4px;
+        margin-top: $vertical-rhythm * 1.5;
+        margin-bottom: $vertical-rhythm * 2;
+        background-color: $text-color;
+
+        @include mq($from: tablet){
+            margin-top: $vertical-rhythm * 2;
+            margin-bottom: $vertical-rhythm * 2.5;
+        }
+        @include mq($from: desktop){
+            margin-top: $vertical-rhythm * 3;
+            margin-bottom: $vertical-rhythm * 3.5;
+        }
+
+    }
+
+}

@@ -1,0 +1,120 @@
+// Dev
+// ---------
+.dev {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  @include style(1rem,palette(white,dark));
+  text-align: center;
+  background: $dev;
+  border-bottom: 3px solid darken($dev,10%);
+  border-radius: 0.25rem;
+
+  &:hover {
+      background: lighten($dev,5%);
+  }
+}
+
+// Attach footer to bottom
+// -----------------------
+//
+// Utiliza flexbox para pegar el footer abajo de la ventana
+html.attach-footer-to-bottom {
+
+    @media screen and (min-height: $tablet){
+
+        height: 100%;
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-header {
+            flex: 0 0 auto;
+        }
+        .site-container {
+            flex: 1 0 auto;
+        }
+        .site-footer {
+            flex: 0 0 auto;
+        }
+    }
+}
+
+// Navigation tip
+// -----------------------
+//
+// Utiliza min-height y max-height para definir un rango de pantalla especial
+// En este caso incomoda tanto la nagevación que se recomienda girar el dispositivo
+@media screen and (orientation: landscape) and (min-height: 10em) and (max-height: 20em)  {
+
+    .navigation-tip {
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: fixed;
+            cursor:pointer;
+        }
+
+        &::before {
+            content: attr(data-message);
+            width: 80%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            z-index: 101;
+            color: palette(black);
+            box-shadow: 0 0 8px rgba(palette(black),0.5);
+            border: 1px solid palette(white)--1;
+            background: rgba(palette(white),0.9);
+            padding: 16px;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+
+        &::after {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(palette(black),0.6);
+        }
+
+        &:target {
+            display: none;
+        }
+    }
+
+}
+
+// PRELOAD
+// -----------------------
+.application-preload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black(0.8);
+    z-index: z(spinner);
+
+    > i {
+        color: $text-color;
+    }
+}
+
+// CSS HACKS
+// -----------------
+// http://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11
+//
+// Para IE
+// @media all and (-ms-high-contrast:none) {
+//   * { color: green } /* IE10 */
+//   *::-ms-backdrop, * { color: red } /* IE11 */
+// }

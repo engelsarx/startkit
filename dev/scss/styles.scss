@@ -1,0 +1,65 @@
+// Config
+// ------------
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/variables';
+@import 'config/mq';
+@import 'config/placeholders';
+@import 'config/utilities';
+@import 'config/fonts';
+// @import 'config/debug';
+
+
+// Icon font
+// -------------------------
+@import 'icon-font/icon-font';
+
+// Sprites cvg
+// -------------------------
+@import 'sprite-svg/sprite';
+
+// Base
+// ------------
+@import 'base/normalize';
+@import 'base/basics';
+@import 'base/utils';
+
+// Lib
+// ------------
+@import 'lib/bootstrap/bootstrap';
+
+// Layout
+// ------------
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/main';
+@import 'layout/footer';
+
+// Components
+// ------------
+@import 'components/tables';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/alerts';
+@import 'components/tabs';
+
+// Pages
+// ------------
+@import 'pages/basic-page';
+
+// Overrides
+// -------------------------
+// @import 'overrides/bootstrap';
+
+// Browsers hacks
+// -------------------------
+// @import 'browsers-hacks/safari-8';
+
+// Print
+// -------------------------
+// @import 'print/specific-styles';
+
+// Themes
+// ------------
+// @import 'themes/theme';
+// @import 'themes/admin';

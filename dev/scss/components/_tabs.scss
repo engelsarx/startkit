@@ -1,0 +1,82 @@
+.tabs {
+	padding: calculateRem(40px);
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  	border-radius: $radius;
+  	background-color: palette(white);
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		flex-grow: 1;
+		text-align: center;
+		width: 100%;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background: transparent;
+			transition-property: background, width;
+			transition-duration: 0.5s;
+			transition-timing-function: ease-in-out;
+		}
+
+		&.active {
+			&::after {
+				width: 100%;
+				background: $primary-color;
+			}
+
+			.tabs__link {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&__link {
+		width: 100%;
+		background-color: transparent;
+		color: $text-color;
+		text-decoration: none;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			transform: scale(0.8);
+		}
+	}
+
+	&__icon {
+		margin-right: calculateRem(8px);
+	}
+
+	&__content {
+		width: 100%;
+		padding: calculateRem(40px) 0;
+		overflow: hidden;
+	}
+
+	&__panel {
+		width: 100%;
+		display: none;
+		opacity: 0;
+		transform: translate(-100%,0);
+
+		&.active {
+			display: block;
+			animation: sliderText 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+@keyframes sliderText {
+	100% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+}

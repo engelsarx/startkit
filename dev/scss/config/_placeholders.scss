@@ -1,0 +1,95 @@
+// Visually hide an element
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+// Visually hide an element
+// BUT REMOVE THOSE PROPERTIES AT tablet_large
+%removablevisually {
+    @extend %visuallyhidden;
+    @include mq($from: tablet_large){
+        margin: 0 auto !important;
+        padding: 0 !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        clip: auto !important;
+        position: static !important;
+
+        // html.ie11 & {
+            // margin-left: auto !important;
+            // margin-right: auto !important;
+        // }
+    }
+}
+
+// Add a transition
+%transition {
+  @include transition( all, 120ms, ease-in);
+}
+
+// Breaks p
+%break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// Linear gradient using $text-color
+%text-color-gradient {
+    background: $text-color;
+    background: -moz-linear-gradient(top,  $text-color 0%, $text-lighten-color 100%);
+    background: -webkit-linear-gradient(top,  $text-color 0%,$text-lighten-color 100%);
+    background: linear-gradient(to bottom,  $text-color 0%,$text-lighten-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$text-color}', endColorstr='#{$text-lighten-color}',GradientType=0 );
+}
+
+// Linear gradient using $title-color
+%title-color-gradient {
+    background: $title-color;
+    background: -moz-linear-gradient(top, $title-color 0%, $title-darken-color 55%, $title-color 100%);
+    background: -webkit-linear-gradient(top, $title-color 0%,$title-darken-color 55%,$title-color 100%);
+    background: linear-gradient(to bottom, $title-color 0%,$title-darken-color 55%,$title-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$title-color}', endColorstr='#{$title-darken-color}',GradientType=0 );
+}
+
+// Align center block element
+%center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Clearfix
+%clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Button without browser native button aspect
+// -----------
+%no-aspect-button {
+  border: 0;
+  background-color: $transparent;
+}
+
+// NEW LINE
+// -----------------------
+//
+// Clase para inutilizar los elementos que sean
+%forces-new-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}

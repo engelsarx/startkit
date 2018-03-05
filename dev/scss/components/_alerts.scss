@@ -1,0 +1,53 @@
+@mixin alert-color($color) {
+	background-color: rgba($color,0.7);
+	border: 1px solid darken($color, 10%);
+	color: darken($color, 25%);
+}
+
+.alert {
+	width: 100%;
+	height: auto;
+	padding: 0 calculateRem(16px);
+	display: flex;
+	align-items: baseline;
+
+	&__content {
+		flex: 1;
+		padding-right: calculateRem(16px);
+	}
+
+	&__close {
+		flex: 0 0 auto;
+		padding: 0;
+    	font-size: calculateRem(12px);
+    	background-color: transparent;
+    	transition: color 0.5s ease-in-out;
+
+    	&:hover, &:focus {
+    		color: #fff;
+    	}
+	}
+
+	&__title {
+		font-size: calculateRem(24px);
+		font-weight: 600;
+		padding-top: calculateRem(8px);
+	}
+
+	&--primary {
+		@include alert-color($primary-color);
+	}
+
+	&--secondary {
+		@include alert-color($secondary-color);
+	}
+
+	&--success {
+		@include alert-color($success);
+	}
+
+	&--error {
+		@include alert-color($error);
+	}
+}
+

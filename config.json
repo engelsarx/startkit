@@ -1,0 +1,17 @@
+{
+  "base": "./",
+  "extension": "html",
+  "server": {
+    "development": "./dev",
+    "production": "./dist"
+  },
+  "zip": {
+    "src": "dist/**/*",
+    "dest": "./",
+    "name": "bbc-startkit-html.zip"
+  },
+  "html": {
+    "src": "dev/*.html",
+    "dest": "dist"
+  }
+}

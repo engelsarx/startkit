@@ -1,0 +1,24 @@
+input:not([type]),
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+button{
+	border: none;
+	padding: calculateRem(10px);
+	line-height: calculateRem(25px);
+	border-radius:calculateRem(8px);
+	max-width: 100%;
+	background: palette(white);
+}
+
+textarea {
+   resize: none;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border-color: palette(gray) !important;
+}

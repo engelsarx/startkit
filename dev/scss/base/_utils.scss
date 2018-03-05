@@ -1,0 +1,385 @@
+// Utils
+// -----------
+
+// Format
+// -----------
+.m0 {
+  @include offset(margin,0);
+}
+
+.mt0 {
+  @include offset(margin,0,top);
+}
+
+.mr0 {
+  @include offset(margin,0,right);
+}
+
+.mb0 {
+  @include offset(margin,0,bottom);
+}
+
+.ml0 {
+  @include offset(margin,0,left);
+}
+
+.my0 {
+  @include offset(margin,0,y);
+}
+
+.mx0 {
+  @include offset(margin,0,x);
+}
+
+.m1 {
+  @include offset(margin,1rem);
+}
+
+.mt1 {
+  @include offset(margin,1rem,top);
+}
+
+.mr1 {
+  @include offset(margin,1rem,right);
+}
+
+.mb1 {
+  @include offset(margin,1rem,bottom);
+}
+
+.ml1 {
+  @include offset(margin,1rem,left);
+}
+
+.my1 {
+  @include offset(margin,1rem,y);
+}
+
+.mx1 {
+  @include offset(margin,1rem,x);
+}
+
+.m2 {
+  @include offset(margin,2rem);
+}
+
+.mt2 {
+  @include offset(margin,2rem,top);
+}
+
+.mr2 {
+  @include offset(margin,2rem,right);
+}
+
+.mb2 {
+  @include offset(margin,2rem,bottom);
+}
+
+.ml2 {
+  @include offset(margin,2rem,left);
+}
+
+.my2 {
+  @include offset(margin,2rem,y);
+}
+
+.mx2 {
+  @include offset(margin,2rem,x);
+}
+
+.m3 {
+  @include offset(margin,3rem);
+}
+
+.mt3 {
+  @include offset(margin,3rem,top);
+}
+
+.mr3 {
+  @include offset(margin,3rem,right);
+}
+
+.mb3 {
+  @include offset(margin,3rem,bottom);
+}
+
+.ml3 {
+  @include offset(margin,3rem,left);
+}
+
+.my3 {
+  @include offset(margin,3rem,y);
+}
+
+.mx3 {
+  @include offset(margin,3rem,x);
+}
+
+.p0 {
+  @include offset(padding,0);
+}
+
+.pt0 {
+  @include offset(padding,0,top);
+}
+
+.pr0 {
+  @include offset(padding,0,right);
+}
+
+.pb0 {
+  @include offset(padding,0,bottom);
+}
+
+.pl0 {
+  @include offset(padding,0,left);
+}
+
+.py0 {
+  @include offset(padding,0,y);
+}
+
+.px0 {
+  @include offset(padding,0,x);
+}
+
+.p1 {
+  @include offset(padding,1rem);
+}
+
+.pt1 {
+  @include offset(padding,1rem,top);
+}
+
+.pr1 {
+  @include offset(padding,1rem,right);
+}
+
+.pb1 {
+  @include offset(padding,1rem,bottom);
+}
+
+.pl1 {
+  @include offset(padding,1rem,left);
+}
+
+.py1 {
+  @include offset(padding,1rem,y);
+}
+
+.px1 {
+  @include offset(padding,1rem,x);
+}
+
+.p2 {
+  @include offset(padding,2rem);
+}
+
+.pt2 {
+  @include offset(padding,2rem,top);
+}
+
+.pr2 {
+  @include offset(padding,2rem,right);
+}
+
+.pb2 {
+  @include offset(padding,2rem,bottom);
+}
+
+.pl2 {
+  @include offset(padding,2rem,left);
+}
+
+.py2 {
+  @include offset(padding,2rem,y);
+}
+
+.px2 {
+  @include offset(padding,2rem,x);
+}
+
+.p3 {
+  @include offset(padding,3rem);
+}
+
+.pt3 {
+  @include offset(padding,3rem,top);
+}
+
+.pr3 {
+  @include offset(padding,3rem,right);
+}
+
+.pb3 {
+  @include offset(padding,3rem,bottom);
+}
+
+.pl3 {
+  @include offset(padding,3rem,left);
+}
+
+.py3 {
+  @include offset(padding,3rem,y);
+}
+
+.px3 {
+  @include offset(padding,3rem,x);
+}
+
+// Others
+// ---------
+.cb {
+  clear: both;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.noevents {
+  pointer-events: none;
+}
+
+.rel {
+  position: relative;
+}
+
+.disabled {
+  transition: none;
+  color: palette(grey);
+  cursor: default;
+  pointer-events: none;
+}
+
+// Display
+// ---------
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.di {
+  display: inline;
+}
+
+.dt {
+  display: table;
+}
+
+.dtc {
+  display: table-cell;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.ohx {
+  overflow-x: hidden;
+}
+
+.ohy {
+  overflow-y: hidden;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+.no-before:before,
+.no-after:after,
+.no-pseudo-element:before,
+.no-pseudo-element:after {
+  display: none;
+}
+
+[hidden] {
+   display: none;
+}
+
+// Alignment & decoration
+.tdn {
+  text-decoration: none;
+}
+
+.tdu {
+  text-decoration: underline;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.ttl {
+  text-transform: lowercase;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.fsi {
+  font-style: italic;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tac {
+  text-align: center;
+}
+
+.vat {
+  vertical-align: top;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.vab {
+  vertical-align: bottom;
+}

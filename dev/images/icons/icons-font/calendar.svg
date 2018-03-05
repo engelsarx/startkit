@@ -1,0 +1,15 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 15">
+    <defs>
+        <style>
+            .cls-1{fill:#898989}
+        </style>
+    </defs>
+    <title>
+        calendar
+    </title>
+    <g id="assets">
+        <g id="white">
+            <path id="icon_calendar" data-name="icon/calendar" class="cls-1" d="M11.73 1V0h-1.2v1H6.47V0h-1.2v1H0v14h17V1zM5.27 2.14v1h1.2v-1h4.07v.78h1.2v-.78h4.06v1.95H1.2V2.14zM1.2 13.83V5.26h14.6v8.57z"/>
+        </g>
+    </g>
+</svg>

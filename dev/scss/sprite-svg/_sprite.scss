@@ -1,0 +1,319 @@
+.ibbc-sprite {
+    font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../images/ibbc-sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 53.2em 211.4em;
+
+      .no-svg & {
+        background-image: url("../images/ibbc-sprite.png");
+      }
+    }
+}
+
+
+
+
+.ibbc-sprite.accessibility {
+  &:before {
+      background-position: -1em -1em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-accessibility(){
+    @extend .accessibility;
+  }
+
+
+.ibbc-sprite.address-book {
+  &:before {
+      background-position: -1em -6.2em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-address-book(){
+    @extend .address-book;
+  }
+
+
+.ibbc-sprite.aid-kit {
+  &:before {
+      background-position: -1em -11.4em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-aid-kit(){
+    @extend .aid-kit;
+  }
+
+
+.ibbc-sprite.airplane {
+  &:before {
+      background-position: -1em -16.6em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-airplane(){
+    @extend .airplane;
+  }
+
+
+.ibbc-sprite.alarm {
+  &:before {
+      background-position: -1em -21.8em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-alarm(){
+    @extend .alarm;
+  }
+
+
+.ibbc-sprite.amazon {
+  &:before {
+      background-position: -1em -27em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-amazon(){
+    @extend .amazon;
+  }
+
+
+.ibbc-sprite.ambient {
+  &:before {
+      background-position: -1em -32.2em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-ambient(){
+    @extend .ambient;
+  }
+
+
+.ibbc-sprite.android {
+  &:before {
+      background-position: -1em -37.4em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-android(){
+    @extend .android;
+  }
+
+
+.ibbc-sprite.angry {
+  &:before {
+      background-position: -1em -42.6em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-angry(){
+    @extend .angry;
+  }
+
+
+.ibbc-sprite.angry2 {
+  &:before {
+      background-position: -1em -47.8em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-angry2(){
+    @extend .angry2;
+  }
+
+
+.ibbc-sprite.appleinc {
+  &:before {
+      background-position: -1em -53em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-appleinc(){
+    @extend .appleinc;
+  }
+
+
+.ibbc-sprite.arrow-down {
+  &:before {
+      background-position: -1em -58.2em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-arrow-down(){
+    @extend .arrow-down;
+  }
+
+
+.ibbc-sprite.asesores-blua {
+  &:before {
+      background-position: -1em -63.4em;
+      width: 17em;
+      height: 17em;
+    }
+  }
+
+  @mixin ibbc-sprite-asesores-blua(){
+    @extend .asesores-blua;
+  }
+
+
+.ibbc-sprite.bell {
+  &:before {
+      background-position: -1em -82.4em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-bell(){
+    @extend .bell;
+  }
+
+
+.ibbc-sprite.enairecart-blanco {
+  &:before {
+      background-position: -1em -87.6em;
+      width: 20em;
+      height: 20em;
+    }
+  }
+
+  @mixin ibbc-sprite-enairecart-blanco(){
+    @extend .enairecart-blanco;
+  }
+
+
+.ibbc-sprite.gear {
+  &:before {
+      background-position: -1em -109.6em;
+      width: 1.754em;
+      height: 1.754em;
+    }
+  }
+
+  @mixin ibbc-sprite-gear(){
+    @extend .gear;
+  }
+
+
+.ibbc-sprite.home {
+  &:before {
+      background-position: -1em -113.4em;
+      width: 2.4em;
+      height: 2.4em;
+    }
+  }
+
+  @mixin ibbc-sprite-home(){
+    @extend .home;
+  }
+
+
+.ibbc-sprite.logo-ov {
+  &:before {
+      background-position: -1em -117.8em;
+      width: 12.4em;
+      height: 8.8em;
+    }
+  }
+
+  @mixin ibbc-sprite-logo-ov(){
+    @extend .logo-ov;
+  }
+
+
+.ibbc-sprite.logo-sacyr {
+  &:before {
+      background-position: -1em -128.6em;
+      width: 16.6em;
+      height: 8.8em;
+    }
+  }
+
+  @mixin ibbc-sprite-logo-sacyr(){
+    @extend .logo-sacyr;
+  }
+
+
+.ibbc-sprite.node {
+  &:before {
+      background-position: -1em -139.4em;
+      width: 11.89em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-node(){
+    @extend .node;
+  }
+
+
+.ibbc-sprite.northgate-renting-flexible {
+  &:before {
+      background-position: -1em -144.6em;
+      width: 26.639999999999997em;
+      height: 6.9799999999999995em;
+    }
+  }
+
+  @mixin ibbc-sprite-northgate-renting-flexible(){
+    @extend .northgate-renting-flexible;
+  }
+
+
+.ibbc-sprite.pin {
+  &:before {
+      background-position: -1em -153.6em;
+      width: 51.2em;
+      height: 51.2em;
+    }
+  }
+
+  @mixin ibbc-sprite-pin(){
+    @extend .pin;
+  }
+
+
+.ibbc-sprite.pin-small {
+  &:before {
+      background-position: -1em -206.8em;
+      width: 2.4em;
+      height: 3.6em;
+    }
+  }
+
+  @mixin ibbc-sprite-pin-small(){
+    @extend .pin-small;
+  }
+
+
+

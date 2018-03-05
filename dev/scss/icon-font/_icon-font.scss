@@ -1,0 +1,425 @@
+@font-face {
+	font-family: "ibbc-font";
+	src: url('../fonts/ibbc-font.eot');
+	src: url('../fonts/ibbc-font.eot?#iefix') format('eot'),
+		url('../fonts/ibbc-font.woff2') format('woff2'),
+		url('../fonts/ibbc-font.woff') format('woff'),
+		url('../fonts/ibbc-font.ttf') format('truetype'),
+		url('../fonts/ibbc-font.svg#ibbc-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin ibbc-icon($content:'') {
+	font-family: "ibbc-font";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: inherit;
+	line-height: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+
+	&:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		content: $content;
+		font-family: "ibbc-font";
+		font-size: inherit;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: 1;
+		speak: none;
+		text-transform: none;
+	}
+
+}
+
+//=======
+// VARS
+//=======
+
+$ibbc-icon-arrow-left: '\B001';
+
+$ibbc-icon-arrow-right: '\B002';
+
+$ibbc-icon-bell-tool: '\B003';
+
+$ibbc-icon-bell: '\B004';
+
+$ibbc-icon-calendar: '\B005';
+
+$ibbc-icon-clock-big: '\B006';
+
+$ibbc-icon-collapsed: '\B007';
+
+$ibbc-icon-doc: '\B008';
+
+$ibbc-icon-escudo: '\B009';
+
+$ibbc-icon-gear: '\B00A';
+
+$ibbc-icon-historic: '\B00B';
+
+$ibbc-icon-logo-ov: '\B00C';
+
+$ibbc-icon-logo-sacyr: '\B00D';
+
+$ibbc-icon-logout: '\B00E';
+
+$ibbc-icon-lupa: '\B00F';
+
+$ibbc-icon-menu: '\B010';
+
+$ibbc-icon-minus: '\B011';
+
+$ibbc-icon-plus: '\B012';
+
+$ibbc-icon-reload: '\B013';
+
+$ibbc-icon-route: '\B014';
+
+$ibbc-icon-supervisor: '\B015';
+
+$ibbc-icon-tick: '\B016';
+
+$ibbc-icon-trash: '\B017';
+
+$ibbc-icon-uncollapsed: '\B018';
+
+$ibbc-icon-user: '\B019';
+
+$ibbc-icon-work: '\B01A';
+
+$ibbc-icon-xsign: '\B01B';
+
+
+
+//==========
+// CLASSES
+//==========
+// .ibbc-icon-arrow-left {
+// 	content: ibbc-icon(arrow-left);
+// }
+// .ibbc-icon-arrow-right {
+// 	content: ibbc-icon(arrow-right);
+// }
+// .ibbc-icon-bell-tool {
+// 	content: ibbc-icon(bell-tool);
+// }
+// .ibbc-icon-bell {
+// 	content: ibbc-icon(bell);
+// }
+// .ibbc-icon-calendar {
+// 	content: ibbc-icon(calendar);
+// }
+// .ibbc-icon-clock-big {
+// 	content: ibbc-icon(clock-big);
+// }
+// .ibbc-icon-collapsed {
+// 	content: ibbc-icon(collapsed);
+// }
+// .ibbc-icon-doc {
+// 	content: ibbc-icon(doc);
+// }
+// .ibbc-icon-escudo {
+// 	content: ibbc-icon(escudo);
+// }
+// .ibbc-icon-gear {
+// 	content: ibbc-icon(gear);
+// }
+// .ibbc-icon-historic {
+// 	content: ibbc-icon(historic);
+// }
+// .ibbc-icon-logo-ov {
+// 	content: ibbc-icon(logo-ov);
+// }
+// .ibbc-icon-logo-sacyr {
+// 	content: ibbc-icon(logo-sacyr);
+// }
+// .ibbc-icon-logout {
+// 	content: ibbc-icon(logout);
+// }
+// .ibbc-icon-lupa {
+// 	content: ibbc-icon(lupa);
+// }
+// .ibbc-icon-menu {
+// 	content: ibbc-icon(menu);
+// }
+// .ibbc-icon-minus {
+// 	content: ibbc-icon(minus);
+// }
+// .ibbc-icon-plus {
+// 	content: ibbc-icon(plus);
+// }
+// .ibbc-icon-reload {
+// 	content: ibbc-icon(reload);
+// }
+// .ibbc-icon-route {
+// 	content: ibbc-icon(route);
+// }
+// .ibbc-icon-supervisor {
+// 	content: ibbc-icon(supervisor);
+// }
+// .ibbc-icon-tick {
+// 	content: ibbc-icon(tick);
+// }
+// .ibbc-icon-trash {
+// 	content: ibbc-icon(trash);
+// }
+// .ibbc-icon-uncollapsed {
+// 	content: ibbc-icon(uncollapsed);
+// }
+// .ibbc-icon-user {
+// 	content: ibbc-icon(user);
+// }
+// .ibbc-icon-work {
+// 	content: ibbc-icon(work);
+// }
+// .ibbc-icon-xsign {
+// 	content: ibbc-icon(xsign);
+// }
+// 
+
+
+[class^="ibbc-icon-"]{
+	@include ibbc-icon();
+}
+
+.ibbc-icon {
+	//@include ibbc-icon();
+
+	&--lg{
+		font-size: 1.33333333em !important;
+		line-height: 0.75em;
+		vertical-align: -15%;
+	}
+
+	// {% for key, val in sizes -%}
+	// &--{{val}}x { font-size: {{val}}em; }
+	// {% endfor %}
+	&--2x { font-size: 2em !important; }
+	&--3x { font-size: 3em !important; }
+	&--4x { font-size: 4em !important; }
+	&--5x { font-size: 5em !important; }
+
+	
+	// icon: arrow-left
+	&-arrow-left:before { content: $ibbc-icon-arrow-left }
+
+	
+	// icon: arrow-right
+	&-arrow-right:before { content: $ibbc-icon-arrow-right }
+
+	
+	// icon: bell-tool
+	&-bell-tool:before { content: $ibbc-icon-bell-tool }
+
+	
+	// icon: bell
+	&-bell:before { content: $ibbc-icon-bell }
+
+	
+	// icon: calendar
+	&-calendar:before { content: $ibbc-icon-calendar }
+
+	
+	// icon: clock-big
+	&-clock-big:before { content: $ibbc-icon-clock-big }
+
+	
+	// icon: collapsed
+	&-collapsed:before { content: $ibbc-icon-collapsed }
+
+	
+	// icon: doc
+	&-doc:before { content: $ibbc-icon-doc }
+
+	
+	// icon: escudo
+	&-escudo:before { content: $ibbc-icon-escudo }
+
+	
+	// icon: gear
+	&-gear:before { content: $ibbc-icon-gear }
+
+	
+	// icon: historic
+	&-historic:before { content: $ibbc-icon-historic }
+
+	
+	// icon: logo-ov
+	&-logo-ov:before { content: $ibbc-icon-logo-ov }
+
+	
+	// icon: logo-sacyr
+	&-logo-sacyr:before { content: $ibbc-icon-logo-sacyr }
+
+	
+	// icon: logout
+	&-logout:before { content: $ibbc-icon-logout }
+
+	
+	// icon: lupa
+	&-lupa:before { content: $ibbc-icon-lupa }
+
+	
+	// icon: menu
+	&-menu:before { content: $ibbc-icon-menu }
+
+	
+	// icon: minus
+	&-minus:before { content: $ibbc-icon-minus }
+
+	
+	// icon: plus
+	&-plus:before { content: $ibbc-icon-plus }
+
+	
+	// icon: reload
+	&-reload:before { content: $ibbc-icon-reload }
+
+	
+	// icon: route
+	&-route:before { content: $ibbc-icon-route }
+
+	
+	// icon: supervisor
+	&-supervisor:before { content: $ibbc-icon-supervisor }
+
+	
+	// icon: tick
+	&-tick:before { content: $ibbc-icon-tick }
+
+	
+	// icon: trash
+	&-trash:before { content: $ibbc-icon-trash }
+
+	
+	// icon: uncollapsed
+	&-uncollapsed:before { content: $ibbc-icon-uncollapsed }
+
+	
+	// icon: user
+	&-user:before { content: $ibbc-icon-user }
+
+	
+	// icon: work
+	&-work:before { content: $ibbc-icon-work }
+
+	
+	// icon: xsign
+	&-xsign:before { content: $ibbc-icon-xsign }
+
+	
+}
+
+
+// %ibbc-icon {
+// 	@include ibbc-icon-styles;
+// }
+
+
+// @function ibbc-icon-char($filename) {
+// 	$char: "";
+// 
+// 	@if $filename == arrow-left {
+// 		$char: "\B001";
+// 	}
+// 	@if $filename == arrow-right {
+// 		$char: "\B002";
+// 	}
+// 	@if $filename == bell-tool {
+// 		$char: "\B003";
+// 	}
+// 	@if $filename == bell {
+// 		$char: "\B004";
+// 	}
+// 	@if $filename == calendar {
+// 		$char: "\B005";
+// 	}
+// 	@if $filename == clock-big {
+// 		$char: "\B006";
+// 	}
+// 	@if $filename == collapsed {
+// 		$char: "\B007";
+// 	}
+// 	@if $filename == doc {
+// 		$char: "\B008";
+// 	}
+// 	@if $filename == escudo {
+// 		$char: "\B009";
+// 	}
+// 	@if $filename == gear {
+// 		$char: "\B00A";
+// 	}
+// 	@if $filename == historic {
+// 		$char: "\B00B";
+// 	}
+// 	@if $filename == logo-ov {
+// 		$char: "\B00C";
+// 	}
+// 	@if $filename == logo-sacyr {
+// 		$char: "\B00D";
+// 	}
+// 	@if $filename == logout {
+// 		$char: "\B00E";
+// 	}
+// 	@if $filename == lupa {
+// 		$char: "\B00F";
+// 	}
+// 	@if $filename == menu {
+// 		$char: "\B010";
+// 	}
+// 	@if $filename == minus {
+// 		$char: "\B011";
+// 	}
+// 	@if $filename == plus {
+// 		$char: "\B012";
+// 	}
+// 	@if $filename == reload {
+// 		$char: "\B013";
+// 	}
+// 	@if $filename == route {
+// 		$char: "\B014";
+// 	}
+// 	@if $filename == supervisor {
+// 		$char: "\B015";
+// 	}
+// 	@if $filename == tick {
+// 		$char: "\B016";
+// 	}
+// 	@if $filename == trash {
+// 		$char: "\B017";
+// 	}
+// 	@if $filename == uncollapsed {
+// 		$char: "\B018";
+// 	}
+// 	@if $filename == user {
+// 		$char: "\B019";
+// 	}
+// 	@if $filename == work {
+// 		$char: "\B01A";
+// 	}
+// 	@if $filename == xsign {
+// 		$char: "\B01B";
+// 	}
+
+// 	@return $char;
+// }
+
+// @mixin ibbc-icon($filename, $insert: before, $extend: true) {
+// 	&:#{$insert} {
+// 		@if $extend {
+// 			@extend %ibbc-icon;
+// 		} @else {
+// 			@include ibbc-icon-styles;
+// 		}
+// 		content: ibbc-icon-char($filename);
+// 	}
+// }
+

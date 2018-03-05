@@ -1,0 +1,13 @@
+.site-container {
+  padding: 0.5rem;
+  background: palette(grey, light);
+}
+
+.aspect-ratio {
+  background: $dev-3;
+  @include aspect-ratio(9, 16);
+}
+
+.icon-sprite {
+  width: 2rem;
+}

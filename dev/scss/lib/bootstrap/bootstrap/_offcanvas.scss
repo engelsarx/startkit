@@ -1,0 +1,11 @@
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+
+.sidebar-offcanvas.active + .row-offcanvas-right{
+  left: 25%;
+  transition: left 0.2s linear;
+
+}  
+

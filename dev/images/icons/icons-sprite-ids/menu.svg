@@ -1,0 +1,9 @@
+<svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon/menu
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M2 21h17.889v-2.667H2V21zm0-6.667h23v-2.666H2v2.666zM2 5v2.667h23V5H2z" fill="#CDDEF4"/>
+        <path d="M0 19h17.889v-2.667H0V19zm0-6.667h23V9.667H0v2.666zM0 3v2.667h23V3H0z" fill="#002395"/>
+    </g>
+</svg>

@@ -1,0 +1,182 @@
+// Dev
+//-----------
+$dev: #f06;
+$dev-1: crimson;
+$dev-2: firebrick;
+$dev-3: yellowgreen;
+
+
+// Namespace
+// -----------
+$namespace: "ibbc";
+
+
+// Brand Colours
+//-----------
+$primary-color: #019798;
+$primary-lighten-color: lighten($primary-color, 10%);
+$primary-darken-color: darken($primary-color, 10%);
+
+$secondary-color: #820363;
+$secondary-lighten-color: lighten($secondary-color, 10%);
+$secondary-darken-color: darken($secondary-color, 10%);
+
+$tertiary-color: #CB6BB4;
+$tertiary-lighten-color: lighten($tertiary-color, 10%);
+$tertiary-darken-color: darken($tertiary-color, 10%);
+
+// Text Colours
+//-----------
+$text-color: #abbabb;
+$text-lighten-color: lighten($tertiary-color, 10%);
+$text-darken-color: darken($tertiary-color, 10%);
+
+$title-color: $text-color;
+$title-lighten-color: lighten($title-color, 10%);
+$title-darken-color: darken($title-color, 10%);
+
+// Generic Colours
+//-----------
+$palettes-neutral: (
+	white: (
+		base  : #ffffff,
+		light : #f5f5f5,
+		dark  : #fafafa
+	),
+	black: (
+		base  : #474646,
+		light : #424242,
+		dark  : #0c0d10
+	),
+	grey: (
+		base  : #898989,
+		light : #b4b4b4,
+		dark  : #4A4A4A
+	),
+	red: (
+		base  : #ec6446,
+		light : #f5f5f5,
+		dark  : #fafafa
+	),
+	blue: (
+		base  : #009FDA,
+		light : #424242,
+		dark  : #00224C
+	),
+	yellow: (
+		base  : #F2AC02,
+		light : #949494,
+		dark  : #1d1d1d
+	),
+	green: (
+		base  : #019798,
+		light : #00BFC1,
+		dark  : #016B6C
+	),
+	purple: (
+		base  : #baaad3,
+		light : #949494,
+		dark  : #1d1d1d
+	),
+);
+
+$transparent: rgba(palette(white),0);
+
+// States Colours
+//-----------
+$error: rgb(190,25,25);
+$success: #50aa00;
+$callout: #f1f0f0;
+
+// Sharing Colours
+//-----------
+$facebook-color: #3b5998;
+$twitter-color: #55acee;
+$linkedin-color: #007bb6;
+$google-plus-color: #dd4b39;
+$youtube-color: #d30a20;
+
+
+// Fonts
+//-----------
+$ff: 'enaire_regular', 'Helvetica', 'Arial', sans-serif;
+$ff-semibold: 'enaire_semibold', 'Helvetica', 'Arial', sans-serif;
+$ff-bold: 'enaire_bold', 'Helvetica', 'Arial', sans-serif;
+$ff-light: 'enaire_light', 'Helvetica', 'Arial', sans-serif;
+$ff-thin: 'enaire_thin', 'Helvetica', 'Arial', sans-serif;
+
+// Font weight
+//-----------
+$fw-100: 100;
+$fw-500: 500;
+$fw-900: 900;
+
+// Font family
+//-----------
+$ff: 'enaire_regular', 'Helvetica', 'Arial', sans-serif;
+
+// Icon font
+// -----------
+$ff-awesome: 'FontAwesome';
+$ff-icons: 'customicons-font';
+
+
+// Easing
+//-----------
+//
+// http://cubic-bezier.com/
+// ease-in fast->slow
+// ease-out slow->fast
+$ease-in: cubic-bezier(0,0,.24,.9);
+$ease-out: cubic-bezier(.59,0,.68,.69);
+$ease-in-bounce: cubic-bezier(.03,.27,.49,1.22);
+$ease-out-bounce: cubic-bezier(.59,0,.59,1.48);
+$ease-linear: cubic-bezier(.03,.27,.44,.93);
+$ease-extreme: cubic-bezier(.68,-0.55,.26,1.55);
+
+
+// Mediaqueries
+//-----------
+$mobile:             20em !default;    // 320px
+$mobile-landscape:   30em !default;    // 480px
+$tablet-small:       37.5em !default;  // 600px
+$tablet-medium:      40em !default;    // 640px
+$tablet:             48em !default;    // 768px
+$tablet-weird:       52.5em !default;  // 840px
+$tablet-large:       64em !default;    // 1024px
+$desktop:            60em !default;    // 960px
+$desktop-extralarge: 85em !default;    // 1360px
+$desktop-max-width:  93.75em !default; // 1500px
+
+
+// Grid
+//-----------
+$max-width: $desktop-max-width;
+
+
+// Header
+//-----------
+
+
+// Menu
+//-----------
+
+
+// Utilities
+//-----------
+$radius: 0.5em;
+
+
+// Z-index
+//-----------
+$z-layers : (
+  bottomless-pit: -9999,
+  default: 1,
+  slider: 100,
+  dropdown: 200,
+  overlay: 300,
+  modal: 400,
+  menu: 500,
+  spinner: 600
+);
+

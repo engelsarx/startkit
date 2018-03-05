@@ -1,0 +1,108 @@
+// Table
+// - tabla DEFAULT
+// - tabla .table-responsive
+// -------------------
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    @include mq($from: tablet_medium) {
+        margin-bottom: 2rem;
+    }
+
+    th {
+        padding: 1rem 0.75rem;
+        @include style(12px, palette(white), $ff);
+        background-color: palette(grey, light);
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    td {
+        vertical-align: middle;
+        padding: 0.75rem;
+        background-color: palette(white);
+        border-bottom: 1px solid $text-color;
+        @include style(12px, $text-color, $ff);
+        &:first-child {
+            font-weight: $fw-900;
+        }
+    }
+}
+
+.table-responsive {
+    @extend .table;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    thead {
+        display: none !important;
+        @include mq($from: tablet_medium) {
+            display: table-row-group !important;
+        }
+    }
+
+    th {
+        @include mq($from: tablet) {
+            @include font-size(16px);
+        }
+    }
+
+    tr {
+        vertical-align: top;
+        @include mq($from: tablet_medium) {}
+        &:last-child {
+            border-bottom: 0;
+            td {
+                @include mq($from: tablet_medium) {
+                    border-bottom: 0 !important;
+                }
+                &:last-child {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+        td:last-child {
+            border-bottom: 0 !important;
+            @include mq($from: tablet_medium) {
+                border-bottom: 1px solid palette(grey, light) !important;
+            }
+        }
+    }
+
+    td {
+        display: block;
+        @include font-size(14px);
+        text-align: left;
+        border-bottom: 1px solid palette(grey, light) !important;
+        &::before {
+            content: attr(data-head);
+            display: inline-block;
+            // display: block;
+            width: auto;
+            min-width: 35%;
+            margin-bottom: 0.5rem;
+            font-family: $ff;
+            font-weight: $fw-900;
+            padding-right: 1rem;
+            font-variant: small-caps;
+        }
+        &:first-child {
+            border-top: 4px solid $text-color;
+        }
+        @include mq($from: tablet_medium) {
+            display: table-cell !important;
+            &::before {
+                content: "";
+                display: none;
+            }
+            &:first-child {
+                border-top: 0;
+            }
+        }
+        @include mq($from: desktop) {
+            @include font-size(16px);
+        }
+    }
+}
